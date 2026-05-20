@@ -61,7 +61,7 @@ st.markdown("""
     .spotify-logo {
         font-size: 1rem;
         font-weight: 700;
-        color: #1DB954;
+        color: #FFF;
         letter-spacing: 2px;
         text-transform: uppercase;
         margin-bottom: 8px;
@@ -393,7 +393,7 @@ fig.update_layout(
     margin=dict(t=40, b=120, l=10, r=10),
 )
 
-st.plotly_chart(fig, use_container_width=True)
+st.plotly_chart(fig, width='stretch')
 
 # ─── GRÁFICA DE PASTEL: CUMPLIMIENTO GENERAL ───────────────────────────────────
 st.markdown('<div class="section-title">Cumplimiento General</div>', unsafe_allow_html=True)
@@ -423,7 +423,7 @@ with col_pie:
             showarrow=False
         )]
     )
-    st.plotly_chart(fig_pie, use_container_width=True)
+    st.plotly_chart(fig_pie, width='stretch')
 
 with col_detail:
     st.markdown("<br><br>", unsafe_allow_html=True)
